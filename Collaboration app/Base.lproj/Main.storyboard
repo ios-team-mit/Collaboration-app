@@ -134,7 +134,7 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup_cropped" translatesAutoresizingMaskIntoConstraints="NO" id="BXW-8r-Q02">
-                                <rect key="frame" x="112" y="56" width="150" height="150"/>
+                                <rect key="frame" x="169.5" y="170" width="36" height="36"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -150,6 +150,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aED-UE-qvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3316" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller For List Of Projects-->
+        <scene sceneID="mIi-Rs-kc7">
+            <objects>
+                <viewController id="55z-2T-wgs" customClass="ViewControllerForListOfProjects" customModule="Collaboration_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gHY-xs-x0f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nv9-As-J64">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProjectsList" id="hZC-NJ-MRP" customClass="ViewControllerTableViewCell" customModule="Collaboration_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hZC-NJ-MRP" id="lXm-8b-4nR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YJW-HE-BzI">
+                                                    <rect key="frame" x="15" y="15" width="345" height="149.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="862-I8-9TW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <color key="textColor" red="0.32549019610000002" green="0.6588235294" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Leader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qr-QM-DUR">
+                                                            <rect key="frame" x="0.0" y="50" width="345" height="49.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zt1-cu-3kb" customClass="View">
+                                                            <rect key="frame" x="0.0" y="99.5" width="345" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YJW-HE-BzI" secondAttribute="trailing" constant="15" id="V0z-jE-D5f"/>
+                                                <constraint firstItem="YJW-HE-BzI" firstAttribute="leading" secondItem="lXm-8b-4nR" secondAttribute="leading" constant="15" id="WZH-JA-MMJ"/>
+                                                <constraint firstItem="YJW-HE-BzI" firstAttribute="top" secondItem="lXm-8b-4nR" secondAttribute="top" constant="15" id="ff3-kJ-urs"/>
+                                                <constraint firstAttribute="bottom" secondItem="YJW-HE-BzI" secondAttribute="bottom" constant="15" id="mHF-ZH-5Ks"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Description" destination="zt1-cu-3kb" id="yOE-Ie-v7N"/>
+                                            <outlet property="LeaderName" destination="8Qr-QM-DUR" id="eF5-ni-q98"/>
+                                            <outlet property="ProjectTitle" destination="862-I8-9TW" id="F3I-Zu-H3f"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ARO-Yy-Wv2" firstAttribute="bottom" secondItem="Nv9-As-J64" secondAttribute="bottom" id="7jm-dv-8Gs"/>
+                            <constraint firstItem="Nv9-As-J64" firstAttribute="top" secondItem="ARO-Yy-Wv2" secondAttribute="top" id="JPX-q5-d3H"/>
+                            <constraint firstItem="ARO-Yy-Wv2" firstAttribute="trailing" secondItem="Nv9-As-J64" secondAttribute="trailing" id="NYs-as-jjQ"/>
+                            <constraint firstItem="Nv9-As-J64" firstAttribute="leading" secondItem="ARO-Yy-Wv2" secondAttribute="leading" id="nS8-qB-evf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ARO-Yy-Wv2"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Nv9-As-J64" id="gHT-ma-OY4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="APn-v3-baP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4204" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -285,9 +361,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="signup_cropped" width="150" height="150"/>
+        <image name="signup_cropped" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9rh-bC-iCW"/>
+        <segue reference="HFS-4n-3N1"/>
     </inferredMetricsTieBreakers>
 </document>
