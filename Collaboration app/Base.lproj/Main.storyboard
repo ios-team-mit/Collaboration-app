@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pLa-Hm-6v9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pLa-Hm-6v9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,9 +45,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfR-x6-e4p">
                                         <rect key="frame" x="0.0" y="223" width="275" height="30"/>
                                         <state key="normal" title="Signup"/>
-                                        <connections>
-                                            <segue destination="IwU-sR-7S9" kind="show" id="VaQ-bP-VP3"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -134,7 +131,7 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup_cropped" translatesAutoresizingMaskIntoConstraints="NO" id="BXW-8r-Q02">
-                                <rect key="frame" x="169.5" y="170" width="36" height="36"/>
+                                <rect key="frame" x="112.5" y="56" width="150" height="150"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -227,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="4204" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Collaboration_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="Collaboration_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,6 +253,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvF-aX-Fyp">
                                         <rect key="frame" x="0.0" y="173" width="275" height="30"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="buttonLoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hrZ-Ac-5G1"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7G0-F8-1X2">
                                         <rect key="frame" x="0.0" y="223" width="275" height="30"/>
@@ -263,9 +263,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POP-wd-BsA">
                                                 <rect key="frame" x="0.0" y="0.0" width="137.5" height="30"/>
                                                 <state key="normal" title="New User?"/>
-                                                <connections>
-                                                    <segue destination="om9-Ly-1BJ" kind="show" id="9rh-bC-iCW"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUO-Po-Zad">
                                                 <rect key="frame" x="137.5" y="0.0" width="137.5" height="30"/>
@@ -318,10 +315,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="GLJ-q7-Plc"/>
+                    <connections>
+                        <outlet property="buttonForgotPassword" destination="TUO-Po-Zad" id="gAl-UU-kFl"/>
+                        <outlet property="buttonLogin" destination="IvF-aX-Fyp" id="1nb-9E-0l4"/>
+                        <outlet property="buttonRegister" destination="POP-wd-BsA" id="GZo-9K-Wpn"/>
+                        <outlet property="imageView" destination="Apr-QL-QeE" id="1mc-DT-lEz"/>
+                        <outlet property="textFieldEmail" destination="0I0-ce-vl5" id="gPI-NC-cA4"/>
+                        <outlet property="textFieldPassword" destination="9RJ-Jj-0kZ" id="aE0-Ec-aVC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="560.79999999999995" y="133.5832083958021"/>
+            <point key="canvasLocation" x="556" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lgX-28-MIW">
@@ -361,9 +366,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="signup_cropped" width="36" height="36"/>
+        <image name="signup_cropped" width="150" height="150"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="HFS-4n-3N1"/>
-    </inferredMetricsTieBreakers>
 </document>
