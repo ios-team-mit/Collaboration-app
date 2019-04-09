@@ -14,4 +14,5 @@ class Data: NSObject {
     var ProjectName:String = "" //Project Name
     var ProjectDescription:String = ""
     var ProjectTeamLeader:String = ""
+    var ProjectRequirements: String = ""
 }

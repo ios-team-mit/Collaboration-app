@@ -21,8 +21,9 @@ class ProjectModel: NSObject {
         //Assign the project data properties
         data1.ProjectId = "1"
         data1.ProjectName = "The first project"
-        data1.ProjectDescription = "Some random detail about the project here"
+        data1.ProjectDescription = "Some random detail about the project here. This line is just to check if the content goes to the next line or just hides."
         data1.ProjectTeamLeader = "IC head office"
+        data1.ProjectRequirements = "A, B, C, D"
         
         //Append it into the ProjectData array
         Projectdata.append(data1)

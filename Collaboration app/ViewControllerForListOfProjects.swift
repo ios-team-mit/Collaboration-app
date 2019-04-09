@@ -13,6 +13,7 @@ class ViewControllerForListOfProjects: UIViewController, UITableViewDataSource, 
     @IBOutlet weak var tableView: UITableView!
     
     var ProjectData:[Data] = [Data]()
+    var selectedProject: Data?
     
     let list = [0, 0, 0] //This is an array of project class that will be provided by the user. Every detail given by the user will come here and then displayed accordingly in the view.
     
@@ -39,6 +40,23 @@ class ViewControllerForListOfProjects: UIViewController, UITableViewDataSource, 
         cell.Description.text? = ProjectData[indexPath.row].ProjectDescription
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //Take note of which project user selected
+        self.selectedProject = self.ProjectData[indexPath.row]
+        
+        //Call the Segue
+        self.performSegue(withIdentifier: "goToDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Get a reference to the destination view controller
+        let detailsViewController = segue.destination as! ViewControllerForMoreDetails
+        
+        //Set the selected property of the destination view controller
+        detailsViewController.selectedProject = self.selectedProject
     }
 
 }
