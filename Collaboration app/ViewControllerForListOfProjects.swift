@@ -8,6 +8,8 @@
 
 import UIKit
 
+//var isLoggedIn : Bool = false
+
 class ViewControllerForListOfProjects: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!

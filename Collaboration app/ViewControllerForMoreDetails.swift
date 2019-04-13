@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewControllerForMoreDetails: UIViewController {
 
     @IBOutlet weak var ProjectTitle: UILabel!
@@ -17,7 +18,28 @@ class ViewControllerForMoreDetails: UIViewController {
     
     var selectedProject: Data?
     
+    
     @IBOutlet weak var ApplyButton: UIButton!
+    
+    
+    
+    @IBAction func onTapApply(_ sender: Any) {
+        
+        if isLoggedIn {
+            print("Email to the team Lead")
+            let email = "yashika.badaya22@zapakmail.com"
+            if let url = URL(string: "mailto:\(email)") {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            }
+        }
+        else {
+            performSegue(withIdentifier: "segueNotLogin", sender: nil)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +55,8 @@ class ViewControllerForMoreDetails: UIViewController {
             self.Description.text = dat.ProjectDescription
             self.Requirements.text = dat.ProjectRequirements
         }
+        
+        
     }
 
 }
