@@ -26,7 +26,6 @@ class LoginViewController: UIViewController {
         if credentials[username!] == password {
             performSegue(withIdentifier: "segueLogin", sender: nil)
             isLoggedIn = true
-
         }
         else {
             warning.isHidden = false

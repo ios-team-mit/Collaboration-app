@@ -12,6 +12,7 @@
 		2214DC632254EBB00063EF04 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214DC622254EBB00063EF04 /* Data.swift */; };
 		2214DC652254EBC00063EF04 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214DC642254EBC00063EF04 /* ProjectModel.swift */; };
 		2215D3EE225CCF0E00D8A2B0 /* ViewControllerForMoreDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215D3ED225CCF0E00D8A2B0 /* ViewControllerForMoreDetails.swift */; };
+		221B045C2264B78200C4E6BB /* SubmitProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B045B2264B78200C4E6BB /* SubmitProjectViewController.swift */; };
 		2287E9CC22621C5800EE2A77 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2287E9CB22621C5800EE2A77 /* LoginViewController.swift */; };
 		2287E9CE22621F4500EE2A77 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2287E9CD22621F4500EE2A77 /* Global.swift */; };
 		2287E9D0226226EA00EE2A77 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2287E9CF226226EA00EE2A77 /* ForgotPasswordViewController.swift */; };
@@ -29,6 +30,7 @@
 		2214DC622254EBB00063EF04 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2214DC642254EBC00063EF04 /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		2215D3ED225CCF0E00D8A2B0 /* ViewControllerForMoreDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerForMoreDetails.swift; sourceTree = "<group>"; };
+		221B045B2264B78200C4E6BB /* SubmitProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitProjectViewController.swift; sourceTree = "<group>"; };
 		2287E9CB22621C5800EE2A77 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2287E9CD22621F4500EE2A77 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		2287E9CF226226EA00EE2A77 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				2287E9CB22621C5800EE2A77 /* LoginViewController.swift */,
 				2287E9CD22621F4500EE2A77 /* Global.swift */,
 				2287E9CF226226EA00EE2A77 /* ForgotPasswordViewController.swift */,
+				221B045B2264B78200C4E6BB /* SubmitProjectViewController.swift */,
 			);
 			path = "Collaboration app";
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				2214DC632254EBB00063EF04 /* Data.swift in Sources */,
 				22BA2B2022620E810071131D /* SignUpViewController.swift in Sources */,
 				3F0E6585224CED0900B38715 /* ViewController.swift in Sources */,
+				221B045C2264B78200C4E6BB /* SubmitProjectViewController.swift in Sources */,
 				2214DC612254EABF0063EF04 /* ViewControllerTableViewCell.swift in Sources */,
 				3F0E6583224CED0900B38715 /* AppDelegate.swift in Sources */,
 				2214DC652254EBC00063EF04 /* ProjectModel.swift in Sources */,

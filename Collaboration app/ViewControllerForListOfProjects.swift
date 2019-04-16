@@ -12,6 +12,7 @@ import UIKit
 
 class ViewControllerForListOfProjects: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var ProposeAProject: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
     var ProjectData:[Data] = [Data]()
@@ -53,12 +54,25 @@ class ViewControllerForListOfProjects: UIViewController, UITableViewDataSource, 
         self.performSegue(withIdentifier: "goToDetail", sender: self)
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        //Get a reference to the destination view controller
+//        let detailsViewController = segue.destination as! ViewControllerForMoreDetails
+//
+//        //Set the selected property of the destination view controller
+//        detailsViewController.selectedProject = self.selectedProject
+//    }
+
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //Get a reference to the destination view controller
-        let detailsViewController = segue.destination as! ViewControllerForMoreDetails
-        
-        //Set the selected property of the destination view controller
-        detailsViewController.selectedProject = self.selectedProject
+        if (segue.identifier == "goToDetail") {
+            let detailsViewController = segue.destination as! ViewControllerForMoreDetails
+            detailsViewController.selectedProject = self.selectedProject
+        }
+    }
+    
+    @IBAction func ProposeAProject(_ sender: Any?) {
+        performSegue(withIdentifier: "ProposeAProject", sender: self)
     }
 
 }
